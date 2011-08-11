@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="app_name">Blade设置</string>
+        <string name="prox_calibration_title_head">距离感应器校准</string>
+        <string name="prox_calibration_summary_head">校准距离感应器</string>
+        <string name="prox_display_title_head">距离感应器数据</string>
+        <string name="prox_display_summary_head">显示当前距离感应器的数据</string>
+        <string  name="toast_error">出错:</string>
+        <string  name="back_button">返回</string>
+</resources>
