@@ -19,6 +19,9 @@ on boot
     write /sys/devices/system/cpu/cpufreq/ondemand/up_threshold 90
     write /sys/devices/system/cpu/cpufreq/ondemand/down_threshold 30
 
+# Setup charging
+    chown system system /sys/module/msm_battery/parameters/usb_chg_enable
+
 
 # Setup bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -142,12 +145,6 @@ on property:dev.bootcomplete=1
     start optimize
     start timing
 #by geno
-
-on property:persist.sys.charging.disable=1
-    write /sys/module/msm_battery/parameters/usb_chg_enable 0
-
-on property:persist.sys.charging.disable=0
-    write /sys/module/msm_battery/parameters/usb_chg_enable 1
 
 service hostapd /system/bin/hostapd /data/misc/wifi/hostapd.conf
     socket hostapd_athap0 dgram 660 wifi wifi

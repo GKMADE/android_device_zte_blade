@@ -7,4 +7,6 @@
         <string name="prox_display_summary_head">显示当前距离感应器的数据</string>
         <string  name="toast_error">出错:</string>
         <string  name="back_button">返回</string>
+        <string name="usb_charging_title_head">USB充电</string>
+        <string name="usb_charging_summary_head">开启/禁用USB充电</string>
 </resources>
