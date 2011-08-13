@@ -80,6 +80,9 @@ int TaosSensor::initialise() {
   char cNum[10] ;
   char cfg_data[100];
 
+  rv = ioctl(dev_fd, TAOS_IOCTL_CONFIG_GET, &cfg);
+  if(rv) LOGE("Failed to read Taos defaults from kernel!!!");
+
   cFile = fopen(PROX_FILE,"r");
   if (cFile != NULL){
     fgets(cfg_data, 100, cFile);
